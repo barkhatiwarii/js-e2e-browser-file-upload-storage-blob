@@ -65,6 +65,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
+              namespace: $(barkhatiwariijse2ebrowserfileuploadstorageblob)
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
 
@@ -72,6 +73,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
+              namespace: $(barkhatiwariijse2ebrowserfileuploadstorageblob)
               manifests: |
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
