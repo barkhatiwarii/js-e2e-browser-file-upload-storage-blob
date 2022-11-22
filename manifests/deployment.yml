@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: barkhatiwariijseebrowserfileuploadstorageblob 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: barkhatiwariijseebrowserfileuploadstorageblob
+  template:
+    metadata:
+      labels:
+        app: barkhatiwariijseebrowserfileuploadstorageblob 
+    spec:
+      containers:
+        - name: barkhatiwariijseebrowserfileuploadstorageblob 
+          image: tadarshtiwari1996.azurecr.io/barkhatiwariijseebrowserfileuploadstorageblob
+          ports:
+          - containerPort: 8080
